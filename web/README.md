@@ -17,6 +17,8 @@ App Store'a native uygulama olarak paketlenebilir.
 - Her engel her zaman çözülebilir üretilir (adalet garantisi — otomasyonla doğrulandı, skor 290+).
 
 ## Uygulanan özellikler
+- ✅ **Son-kullanıcı zorluk eğrisi**: yavaş ve ✕'siz başlangıç (ilk ~8sn), pürüzsüz hızlanma (~1 dk'da tepe hız); yeni oyuncular için ilk 3 oyunda **rehber ışık** + doğru şekil butonunun parıldaması; çözülebilir şeritler renkle okunur (yeşil=zaten uygun, mavi=değiştirerek geçilir, soluk=gidilmez).
+- ✅ **Kontroller**: sağa/sola **kaydır** ya da ekranın **yan tarafına dokun**; şekli alttan seç.
 - ✅ **3D perspektif yol**: kaçış noktası, hareketli ızgara/stripes, perspektifte büyüyen şekiller, seviye/tema geçişleri.
 - ✅ **Portal geçiş efekti**: eşleşen deliğin içinden geçerken genişleyen neon halka ("içinden geçme" hissi).
 - ✅ **Tam Juice + Haptics**: ekran sarsıntısı, FOV punch, parçacık, karakter izi, `navigator.vibrate`, WebAudio sesleri.
