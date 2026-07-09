@@ -1,8 +1,11 @@
-# ŞEKİLGEÇ — Neon Shape Rush
+# ŞEKİLGEÇ 3D — Neon Shape Rush
 
-Mobil, hyper/hybrid-casual bir **şekil-eşleştirme koşu oyunu**. Tek dosya (`web/index.html`),
-harici bağımlılık yok (görsel/font/ses dahil hepsi gömülü). Doğrudan tarayıcıda çalışır ve
-Capacitor ile Play Store / App Store'a native uygulama olarak paketlenebilir.
+Mobil, hyper/hybrid-casual bir **şekil-eşleştirme koşu oyunu**. **Sözde-3B (pseudo-3D) perspektif**
+motoruyla: kaçış noktasına akan neon yol, size doğru büyüyerek gelen şekil duvarları ve tam eşleşen
+deliğin içinden geçerken ekranı saran **portal efekti**. Tek dosya (`web/index.html`), harici
+bağımlılık yok (görsel/font/ses dahil hepsi gömülü — Three.js gibi kütüphane gerektirmez, Canvas
+perspektif projeksiyonu kullanır). Doğrudan tarayıcıda çalışır ve Capacitor ile Play Store /
+App Store'a native uygulama olarak paketlenebilir.
 
 ## Oynanış
 - **4 şerit** var. Karakter altta durur, engeller yukarıdan hızlanarak iner.
@@ -13,9 +16,13 @@ Capacitor ile Play Store / App Store'a native uygulama olarak paketlenebilir.
 - Yanlış şekil ya da ✕ = çarpma. **Kıl payı geçiş** = slow-motion + bonus puan. **◆ altın** topla.
 - Her engel her zaman çözülebilir üretilir (adalet garantisi — otomasyonla doğrulandı, skor 290+).
 
-## Uygulanan özellikler (seçilenler)
-- ✅ **Tam Juice + Haptics**: ekran sarsıntısı, parçacık patlaması, karakter izi, `navigator.vibrate`, WebAudio sesleri.
-- ✅ **Near-miss slow-mo**: kıl payı geçişte 0.35x slow-mo + `+15` bonus.
+## Uygulanan özellikler
+- ✅ **3D perspektif yol**: kaçış noktası, hareketli ızgara/stripes, perspektifte büyüyen şekiller, seviye/tema geçişleri.
+- ✅ **Portal geçiş efekti**: eşleşen deliğin içinden geçerken genişleyen neon halka ("içinden geçme" hissi).
+- ✅ **Tam Juice + Haptics**: ekran sarsıntısı, FOV punch, parçacık, karakter izi, `navigator.vibrate`, WebAudio sesleri.
+- ✅ **Near-miss slow-mo**: kıl payı geçişte 0.34x slow-mo + bonus (combo çarpanıyla ölçeklenir).
+- ✅ **Combo çarpanı**: ardışık geçişlerde ×1…×9 puan çarpanı + combo bildirimi.
+- ✅ **Güç-yükseltmeleri**: 🛡️ Kalkan (bir çarpmayı yutar) · 🧲 Mıknatıs (altınları çeker).
 - ✅ **Coin + Kostüm/Tema**: 6 neon skin, altınla açılır; seçim kalıcı (`localStorage`).
 - ✅ **Günlük görev + Skor**: her gün rastgele görev (altın/skor/near-miss), rekor kaydı.
 - ✅ **Hibrit gelir**: ödüllü reklamla devam + interstitial + "Reklamsız" IAP + kozmetik ekonomi.
